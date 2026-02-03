@@ -18,6 +18,42 @@ final class ProviderSettingsStore {
         keychain.delete(account: apiKeyAccount(for: providerId))
     }
 
+    func qwenAccessKey() -> String? {
+        keychain.read(account: "provider.qwen.access_key")
+    }
+
+    func saveQwenAccessKey(_ value: String) {
+        keychain.save(account: "provider.qwen.access_key", value: value)
+    }
+
+    func clearQwenAccessKey() {
+        keychain.delete(account: "provider.qwen.access_key")
+    }
+
+    func qwenAccessSecret() -> String? {
+        keychain.read(account: "provider.qwen.access_secret")
+    }
+
+    func saveQwenAccessSecret(_ value: String) {
+        keychain.save(account: "provider.qwen.access_secret", value: value)
+    }
+
+    func clearQwenAccessSecret() {
+        keychain.delete(account: "provider.qwen.access_secret")
+    }
+
+    func qwenMonitoringBaseURL() -> String? {
+        defaults.string(forKey: "provider.qwen.monitoring_base_url")
+    }
+
+    func setQwenMonitoringBaseURL(_ value: String?) {
+        if let value = value, !value.isEmpty {
+            defaults.setValue(value, forKey: "provider.qwen.monitoring_base_url")
+        } else {
+            defaults.removeObject(forKey: "provider.qwen.monitoring_base_url")
+        }
+    }
+
     func selectedModel(for providerId: ProviderID) -> String {
         defaults.string(forKey: modelKey(for: providerId)) ?? ProviderCatalog.defaultModel(for: providerId)
     }

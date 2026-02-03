@@ -1,65 +1,72 @@
 import SwiftUI
 
-struct DashboardView: View {
+struct TokenUsageDashboardView: View {
     @ObservedObject var viewModel: DashboardViewModel
-    @State private var editingItem: ProviderUsageItem?
 
     var body: some View {
-        NavigationView {
-            List {
-                Section(header: headerView) {
-                    ForEach(viewModel.items) { item in
-                        ProviderRowView(item: item) {
-                            editingItem = item
-                        }
-                    }
-                }
-
-                Section(header: Text("Trends")) {
-                    ForEach(viewModel.items) { item in
-                        TrendCardView(
-                            item: item,
-                            samples: viewModel.history[item.provider.id] ?? []
-                        )
-                    }
-                }
+        ScrollView {
+            VStack(alignment: .leading, spacing: 24) {
+                summarySection
+                modelsSection
             }
-            .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle("Token Tracker", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: viewModel.refresh) {
-                Image(systemName: "arrow.clockwise")
-            })
+            .padding()
         }
-        .sheet(item: $editingItem) { item in
-            ManualAdjustView(
-                provider: item.provider,
-                initialRemaining: item.usage.remaining,
-                initialLimit: item.usage.limit,
-                unit: item.usage.unit
-            ) { remaining, limit in
-                viewModel.updateManual(providerId: item.provider.id, remaining: remaining, limit: limit)
+        .navigationTitle("用量监控")
+        .onAppear { viewModel.start() }
+        .onDisappear { viewModel.stop() }
+    }
+
+    private var summarySection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("总览")
+                .font(.headline)
+
+            LineChartView(series: totalSeries)
+
+            HStack {
+                Text("总消耗折线图（按模型）")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Spacer()
+                if let lastRefresh = viewModel.lastRefresh {
+                    Text("更新 \(formatTime(lastRefresh))")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
             }
         }
     }
 
-    private var headerView: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text("Providers")
+    private var modelsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("模型用量")
                 .font(.headline)
-            if let lastRefresh = viewModel.lastRefresh {
-                Text("Last refresh: \(formatted(date: lastRefresh))")
+
+            if viewModel.items.isEmpty {
+                Text("请在设置页添加 API Key 后显示数据")
                     .font(.caption)
                     .foregroundColor(.secondary)
             } else {
-                Text("Last refresh: --")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                ForEach(viewModel.items) { item in
+                    NavigationLink(destination: ModelDetailView(item: item, samples: viewModel.history[item.provider.id] ?? [])) {
+                        ModelUsageCardView(item: item)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    Divider()
+                }
             }
         }
-        .textCase(nil)
     }
 
-    private func formatted(date: Date) -> String {
+    private var totalSeries: [ChartSeries] {
+        let series = viewModel.items.map { item -> ChartSeries in
+            let points = viewModel.history[item.provider.id]?.sorted { $0.timestamp < $1.timestamp }.map { $0.used } ?? []
+            return ChartSeries(id: item.provider.id, name: item.provider.displayName, color: item.provider.id.accentColor, points: points)
+        }
+        return series
+    }
+
+    private func formatTime(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .none
         formatter.timeStyle = .short

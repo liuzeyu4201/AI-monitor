@@ -5,17 +5,34 @@ struct ProviderRegistry {
     let clients: [ProviderID: TokenUsageClient]
 
     static func `default`() -> ProviderRegistry {
-        let providers = ProviderID.allCases.map { Provider(id: $0, apiBaseURL: ProviderCatalog.baseURL(for: $0)) }
         let settingsStore = ProviderSettingsStore.shared
-
-        // TODO: Replace MockTokenUsageClient with real API clients per provider.
-        // Keep the mapping by ProviderID so new providers can be added without changing view code.
         let clients: [ProviderID: TokenUsageClient] = [
-            .openai: MockTokenUsageClient(providerId: .openai),
             .deepseek: DeepSeekTokenUsageClient(settingsStore: settingsStore),
-            .qwen: MockTokenUsageClient(providerId: .qwen),
-            .zhipu: MockTokenUsageClient(providerId: .zhipu)
+            .openai: OpenAITokenUsageClient(settingsStore: settingsStore),
+            .qwen: QwenTokenUsageClient(settingsStore: settingsStore)
         ]
+
+        let activeProviders = ProviderID.allCases.filter { providerId in
+            guard clients[providerId] != nil else { return false }
+            switch providerId {
+            case .qwen:
+                return settingsStore.qwenAccessKey() != nil && settingsStore.qwenAccessSecret() != nil && settingsStore.qwenMonitoringBaseURL() != nil
+            case .openai, .deepseek:
+                return settingsStore.apiKey(for: providerId) != nil
+            case .zhipu:
+                return false
+            }
+        }
+        let providers = activeProviders.map { providerId -> Provider in
+            let baseURL: String?
+            switch providerId {
+            case .qwen:
+                baseURL = settingsStore.qwenMonitoringBaseURL()
+            default:
+                baseURL = ProviderCatalog.baseURL(for: providerId)
+            }
+            return Provider(id: providerId, apiBaseURL: baseURL)
+        }
 
         return ProviderRegistry(providers: providers, clients: clients)
     }

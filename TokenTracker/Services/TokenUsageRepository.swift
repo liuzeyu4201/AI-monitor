@@ -2,7 +2,7 @@ import Foundation
 
 final class TokenUsageRepository {
     private let store: TokenUsageStore
-    private let registry: ProviderRegistry
+    private var registry: ProviderRegistry
     private let historyStore: TokenUsageHistoryStore
     private var cache: [ProviderID: TokenUsage]
     private var history: [ProviderID: [TokenUsageSample]]
@@ -17,6 +17,10 @@ final class TokenUsageRepository {
         self.history = historyStore.load()
         pruneHistory()
         historyStore.save(history)
+    }
+
+    func updateRegistry(_ registry: ProviderRegistry) {
+        self.registry = registry
     }
 
     func loadCached() -> [ProviderID: TokenUsage] {

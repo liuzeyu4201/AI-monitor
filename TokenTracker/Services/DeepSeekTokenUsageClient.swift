@@ -2,15 +2,26 @@ import Foundation
 
 final class DeepSeekTokenUsageClient: TokenUsageClient {
     private let settingsStore: ProviderSettingsStore
+    private let apiKeyOverride: String?
     private let session: URLSession
 
-    init(settingsStore: ProviderSettingsStore = .shared, session: URLSession = .shared) {
+    init(settingsStore: ProviderSettingsStore = .shared, apiKeyOverride: String? = nil, session: URLSession? = nil) {
         self.settingsStore = settingsStore
-        self.session = session
+        self.apiKeyOverride = apiKeyOverride
+        if let session = session {
+            self.session = session
+        } else {
+            let config = URLSessionConfiguration.default
+            config.waitsForConnectivity = false
+            config.timeoutIntervalForRequest = 12
+            config.timeoutIntervalForResource = 12
+            self.session = URLSession(configuration: config)
+        }
     }
 
     func fetchUsage(for provider: Provider, cached: TokenUsage?, completion: @escaping (Result<TokenUsage, Error>) -> Void) {
-        guard let apiKey = settingsStore.apiKey(for: .deepseek) else {
+        let apiKey = apiKeyOverride ?? settingsStore.apiKey(for: .deepseek)
+        guard let apiKey = apiKey else {
             completion(.failure(TokenUsageClientError.missingApiKey))
             return
         }
@@ -23,6 +34,7 @@ final class DeepSeekTokenUsageClient: TokenUsageClient {
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
+        request.timeoutInterval = 12
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
 
@@ -33,7 +45,24 @@ final class DeepSeekTokenUsageClient: TokenUsageClient {
                 return
             }
 
-            guard let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode), let data = data else {
+            guard let http = response as? HTTPURLResponse else {
+                completion(.failure(TokenUsageClientError.invalidResponse))
+                return
+            }
+
+            guard (200..<300).contains(http.statusCode) else {
+                let body = data.flatMap { String(data: $0, encoding: .utf8) }
+                let trimmed: String?
+                if let body = body, body.count > 300 {
+                    trimmed = String(body.prefix(300)) + "..."
+                } else {
+                    trimmed = body
+                }
+                completion(.failure(TokenUsageClientError.httpStatus(http.statusCode, trimmed)))
+                return
+            }
+
+            guard let data = data else {
                 completion(.failure(TokenUsageClientError.invalidResponse))
                 return
             }
@@ -58,7 +87,8 @@ final class DeepSeekTokenUsageClient: TokenUsageClient {
                 let burnRate = delta / minutes
 
                 let budget = self.settingsStore.budget(for: .deepseek)
-                let limit = max(budget ?? 0, balanceValue)
+                let previousLimit = previous?.limit ?? 0
+                let limit = max(budget ?? 0, balanceValue, previousLimit)
 
                 let usage = TokenUsage(
                     providerId: .deepseek,

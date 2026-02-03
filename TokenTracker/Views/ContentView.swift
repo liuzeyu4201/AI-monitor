@@ -7,27 +7,33 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            DashboardView(viewModel: dashboardViewModel)
+            HomeView(dashboardViewModel: dashboardViewModel)
                 .tabItem {
-                    Label("Dashboard", systemImage: "chart.bar")
+                    Label("开始", systemImage: "square.grid.2x2")
                 }
 
             SettingsView(viewModel: settingsViewModel) {
+                dashboardViewModel.reloadProviders()
                 dashboardViewModel.refresh()
             }
             .tabItem {
-                Label("Settings", systemImage: "gearshape")
+                Label("设置", systemImage: "gearshape")
             }
         }
-        .onAppear { dashboardViewModel.start() }
         .onChange(of: scenePhase) { phase in
             switch phase {
             case .active:
-                dashboardViewModel.start()
+                break
             case .background, .inactive:
                 dashboardViewModel.stop()
             @unknown default:
                 break
+            }
+        }
+        .onAppear {
+            settingsViewModel.onSaveSuccess = {
+                dashboardViewModel.reloadProviders()
+                dashboardViewModel.refresh()
             }
         }
     }

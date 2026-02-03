@@ -18,7 +18,9 @@ struct ProviderCatalog {
         switch providerId {
         case .deepseek:
             return "https://api.deepseek.com"
-        case .openai, .qwen, .zhipu:
+        case .openai:
+            return "https://api.openai.com"
+        case .qwen, .zhipu:
             return nil
         }
     }

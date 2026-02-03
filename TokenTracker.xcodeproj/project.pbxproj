@@ -7,191 +7,211 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED5B61A29E8041DA9DD5916B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADE0FD1C1D243CCB5937DFC /* Assets.xcassets */; };
-		E4AFD66AFC3F46E48C23620E /* TokenTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD848A41FD54268A0520E18 /* TokenTrackerApp.swift */; };
-		66C224A4434042E8929F6BA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD13A38DDF341B08AF9C740 /* ContentView.swift */; };
-		9D9F5B009D4A49389D26CC1B /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F559D700F5E47D2BF0E90FA /* DashboardView.swift */; };
-		C75F1FE8F4FC43588905393B /* ProviderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB42E6AC812C46DE838FD16A /* ProviderRowView.swift */; };
-		A24B1CBE144E4E62A8869DB2 /* ManualAdjustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85F8ADBA0984732B3111674 /* ManualAdjustView.swift */; };
-		4CC7248AFD9047A0883F81AA /* TrendChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA399E3A9B743B98C4EA566 /* TrendChartView.swift */; };
-		230BB483676646C4B8172D42 /* TrendCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758810B9B15A4FA6BB09B5DD /* TrendCardView.swift */; };
-		7071E5DF2E6A41DE8F48B8B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC06ACD1D6E4E958D3029B5 /* SettingsView.swift */; };
-		1B7D5E71A5824B0CAA27C8C9 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DC8109600248F68313B59E /* Provider.swift */; };
-		A4E21FFC1ECF4473B2BD84C9 /* ProviderCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBDC8A13A6424B80FB2CBA /* ProviderCatalog.swift */; };
-		D95F5B0214B74BFD9BE7BA4C /* TokenUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34666B0033264759A0082764 /* TokenUsage.swift */; };
-		0A001C04C626443D995C0305 /* TokenUsageSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A23F0609F8E4D23A6104D03 /* TokenUsageSample.swift */; };
-		D61055D40E384E2B83660EA4 /* ProviderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDFAB5A81A2466F8A96FF35 /* ProviderRegistry.swift */; };
-		C442756E0A384504A054356D /* TokenUsageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59772179AD0949D29674F40D /* TokenUsageStore.swift */; };
-		5AC7C84395A0412088473A9C /* LocalTokenUsageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD5F9737D14CD0BFCAF305 /* LocalTokenUsageStore.swift */; };
-		704016AC55A34475B4F7AFDF /* TokenUsageHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F33C5D04A4475B4302A20 /* TokenUsageHistoryStore.swift */; };
-		CCCCB5756A4E483888264ECF /* LocalTokenUsageHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFA9A7C8C92499EB881BC20 /* LocalTokenUsageHistoryStore.swift */; };
-		5B06859B4E354A81AA06C126 /* ProviderSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93645AA8CC6D4328B2B58340 /* ProviderSettingsStore.swift */; };
-		D3160A5EF4E9488DB1908FF3 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0F5C7CF6C4A82B5A7696F /* KeychainStore.swift */; };
-		ABF2B7109DBE4AAA8B10F341 /* TokenUsageClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B55A4BD81E41D78EE655A8 /* TokenUsageClientError.swift */; };
-		1DE216705B794841AC540841 /* MockTokenUsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594706FBDFF45D993214B91 /* MockTokenUsageClient.swift */; };
-		7171954EFDF84FC697077F11 /* DeepSeekTokenUsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63639C483B8A46919B8D0565 /* DeepSeekTokenUsageClient.swift */; };
-		B900BA500FB24EA684DDB790 /* TokenUsageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101BA976A5C74733A4AD05D2 /* TokenUsageRepository.swift */; };
-		7A22E08FEC0E4BD7943DF846 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F5F66F86114F18B62F5B8F /* DashboardViewModel.swift */; };
-		8313B24CBAB6471688D01672 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87C054BCD44C8EABB46043 /* SettingsViewModel.swift */; };
+		111EA1F9A1454D189753946C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1974CC595994A92AC40B82C /* Assets.xcassets */; };
+		8BCAABA0484C4A7187921FC7 /* TokenTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE7A64C5B8D48DCA9986C2B /* TokenTrackerApp.swift */; };
+		40A60E02042344878D44A20C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503A3BB0AD047C29BD72B01 /* ContentView.swift */; };
+		6B827C63CF6C4000B77A2572 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADFFEE881284A0FAC1711A2 /* HomeView.swift */; };
+		5809BE5C5CF04E5EA27BDE4D /* MonitorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9180DB435EDE47C2AFC3C17A /* MonitorCardView.swift */; };
+		B148054C90784B71A7B3FF83 /* DockerMonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A0F638A6484902AFC22E79 /* DockerMonitorView.swift */; };
+		D45890CE6B824ED3A6F36F53 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB56C092EFC4662A3110185 /* DashboardView.swift */; };
+		CB8582010EA1473491C7F061 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EC113CDFE043A4921C6793 /* LineChartView.swift */; };
+		C2A9666D16EF4334809C817A /* ModelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC682EC62BC4C8FA59D7DD0 /* ModelDetailView.swift */; };
+		A6A62CDA718646798C9BE2A3 /* ModelUsageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC41F4D021A6417B8BF134DE /* ModelUsageCardView.swift */; };
+		5717E0CC642F48B087514990 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786CF7B43CE04099AACD1CEE /* SettingsView.swift */; };
+		925A844B0C284D2FB7B2C16C /* UsageDonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A76C7B02346F4AD1259C6 /* UsageDonutView.swift */; };
+		0BFBA337968A4105A532B44E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179629371EE045DEB33CDBE6 /* Provider.swift */; };
+		D5276F683C884D4296AF3C89 /* ProviderCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877E5909643D3A02C6CDE /* ProviderCatalog.swift */; };
+		97A160A4682B4A65A6E46F24 /* TokenUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0ABFC9A564121A011775C /* TokenUsage.swift */; };
+		6279750F43F94E7AA3D5ABC7 /* TokenUsageSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA916E1E97E74222AB3B1BD9 /* TokenUsageSample.swift */; };
+		7802CD29E04143C3B5C3F1F0 /* ProviderRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423594F9E3F4A4EA54A0C89 /* ProviderRegistry.swift */; };
+		E23F898C260F47F19FEDE3EC /* TokenUsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831DDFCA51049DFB6F76CD4 /* TokenUsageClient.swift */; };
+		8A48F5C9403145B6939343C6 /* OpenAITokenUsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96606AF10294453B15BF7AC /* OpenAITokenUsageClient.swift */; };
+		88A06467F3C64AE2A991497E /* QwenTokenUsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E43413571084B8BA0E9A103 /* QwenTokenUsageClient.swift */; };
+		CD13F4BA977C4D9294754870 /* TokenUsageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5DD795560E4B679625CE9F /* TokenUsageStore.swift */; };
+		FBE5E455E5AF45B48F21D9A9 /* LocalTokenUsageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D5926F281466F8EE5F9D1 /* LocalTokenUsageStore.swift */; };
+		71EB6D148CE241968B556873 /* TokenUsageHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB67442557B48EEB7B24F08 /* TokenUsageHistoryStore.swift */; };
+		693BB62A29714AABB341F056 /* LocalTokenUsageHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CF3472C96445C918B36FC /* LocalTokenUsageHistoryStore.swift */; };
+		70917B787F1E4B318090E404 /* ProviderSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17BD8F56DAD4021868A7F7B /* ProviderSettingsStore.swift */; };
+		9684480FABF64C0FB6C6FCAF /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B645E1481544CE882EBDAA /* KeychainStore.swift */; };
+		4DAAE2D659C84DF5B7CADFA6 /* TokenUsageClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5829C81EF4D9B8E35FB2D /* TokenUsageClientError.swift */; };
+		E48549478171496F81ED73D2 /* DeepSeekTokenUsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5966DA05C64E7F836F0D18 /* DeepSeekTokenUsageClient.swift */; };
+		26F973EAAA9A41E2A797ED62 /* TokenUsageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7020773B34CB444D8F8DB2A8 /* TokenUsageRepository.swift */; };
+		4E78158836AA4EAB9DA17F02 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EF5F9FDC942A3ACC0042E /* DashboardViewModel.swift */; };
+		516934D345284EE8A9AE0219 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232361A05824F86BC546B75 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F996EFF62824CD5A4D79C7F /* TokenTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DD848A41FD54268A0520E18 /* TokenTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTrackerApp.swift; sourceTree = "<group>"; };
-		FBD13A38DDF341B08AF9C740 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2F559D700F5E47D2BF0E90FA /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		CB42E6AC812C46DE838FD16A /* ProviderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRowView.swift; sourceTree = "<group>"; };
-		F85F8ADBA0984732B3111674 /* ManualAdjustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAdjustView.swift; sourceTree = "<group>"; };
-		CEA399E3A9B743B98C4EA566 /* TrendChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendChartView.swift; sourceTree = "<group>"; };
-		758810B9B15A4FA6BB09B5DD /* TrendCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCardView.swift; sourceTree = "<group>"; };
-		2CC06ACD1D6E4E958D3029B5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		33DC8109600248F68313B59E /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		2DEBDC8A13A6424B80FB2CBA /* ProviderCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCatalog.swift; sourceTree = "<group>"; };
-		34666B0033264759A0082764 /* TokenUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsage.swift; sourceTree = "<group>"; };
-		1A23F0609F8E4D23A6104D03 /* TokenUsageSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageSample.swift; sourceTree = "<group>"; };
-		EEDFAB5A81A2466F8A96FF35 /* ProviderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegistry.swift; sourceTree = "<group>"; };
-		59772179AD0949D29674F40D /* TokenUsageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageStore.swift; sourceTree = "<group>"; };
-		38DD5F9737D14CD0BFCAF305 /* LocalTokenUsageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTokenUsageStore.swift; sourceTree = "<group>"; };
-		A80F33C5D04A4475B4302A20 /* TokenUsageHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageHistoryStore.swift; sourceTree = "<group>"; };
-		0FFA9A7C8C92499EB881BC20 /* LocalTokenUsageHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTokenUsageHistoryStore.swift; sourceTree = "<group>"; };
-		93645AA8CC6D4328B2B58340 /* ProviderSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSettingsStore.swift; sourceTree = "<group>"; };
-		17C0F5C7CF6C4A82B5A7696F /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
-		D0B55A4BD81E41D78EE655A8 /* TokenUsageClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageClientError.swift; sourceTree = "<group>"; };
-		7594706FBDFF45D993214B91 /* MockTokenUsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTokenUsageClient.swift; sourceTree = "<group>"; };
-		63639C483B8A46919B8D0565 /* DeepSeekTokenUsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepSeekTokenUsageClient.swift; sourceTree = "<group>"; };
-		101BA976A5C74733A4AD05D2 /* TokenUsageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageRepository.swift; sourceTree = "<group>"; };
-		93F5F66F86114F18B62F5B8F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
-		5F87C054BCD44C8EABB46043 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		7ADE0FD1C1D243CCB5937DFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6CDF3C33285A4A30A9613B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0CAE44FB0A4474C976BB3BE /* TokenTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FE7A64C5B8D48DCA9986C2B /* TokenTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTrackerApp.swift; sourceTree = "<group>"; };
+		B503A3BB0AD047C29BD72B01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0ADFFEE881284A0FAC1711A2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9180DB435EDE47C2AFC3C17A /* MonitorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorCardView.swift; sourceTree = "<group>"; };
+		67A0F638A6484902AFC22E79 /* DockerMonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerMonitorView.swift; sourceTree = "<group>"; };
+		FAB56C092EFC4662A3110185 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		58EC113CDFE043A4921C6793 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		4DC682EC62BC4C8FA59D7DD0 /* ModelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDetailView.swift; sourceTree = "<group>"; };
+		EC41F4D021A6417B8BF134DE /* ModelUsageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUsageCardView.swift; sourceTree = "<group>"; };
+		786CF7B43CE04099AACD1CEE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B85A76C7B02346F4AD1259C6 /* UsageDonutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageDonutView.swift; sourceTree = "<group>"; };
+		179629371EE045DEB33CDBE6 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		027877E5909643D3A02C6CDE /* ProviderCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCatalog.swift; sourceTree = "<group>"; };
+		EAE0ABFC9A564121A011775C /* TokenUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsage.swift; sourceTree = "<group>"; };
+		BA916E1E97E74222AB3B1BD9 /* TokenUsageSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageSample.swift; sourceTree = "<group>"; };
+		C423594F9E3F4A4EA54A0C89 /* ProviderRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderRegistry.swift; sourceTree = "<group>"; };
+		4831DDFCA51049DFB6F76CD4 /* TokenUsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageClient.swift; sourceTree = "<group>"; };
+		B96606AF10294453B15BF7AC /* OpenAITokenUsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAITokenUsageClient.swift; sourceTree = "<group>"; };
+		6E43413571084B8BA0E9A103 /* QwenTokenUsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QwenTokenUsageClient.swift; sourceTree = "<group>"; };
+		FE5DD795560E4B679625CE9F /* TokenUsageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageStore.swift; sourceTree = "<group>"; };
+		690D5926F281466F8EE5F9D1 /* LocalTokenUsageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTokenUsageStore.swift; sourceTree = "<group>"; };
+		2DB67442557B48EEB7B24F08 /* TokenUsageHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageHistoryStore.swift; sourceTree = "<group>"; };
+		8B9CF3472C96445C918B36FC /* LocalTokenUsageHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTokenUsageHistoryStore.swift; sourceTree = "<group>"; };
+		E17BD8F56DAD4021868A7F7B /* ProviderSettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSettingsStore.swift; sourceTree = "<group>"; };
+		B1B645E1481544CE882EBDAA /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		B8A5829C81EF4D9B8E35FB2D /* TokenUsageClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageClientError.swift; sourceTree = "<group>"; };
+		1A5966DA05C64E7F836F0D18 /* DeepSeekTokenUsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepSeekTokenUsageClient.swift; sourceTree = "<group>"; };
+		7020773B34CB444D8F8DB2A8 /* TokenUsageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUsageRepository.swift; sourceTree = "<group>"; };
+		7A0EF5F9FDC942A3ACC0042E /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		0232361A05824F86BC546B75 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		D1974CC595994A92AC40B82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BFD9FAE5E4947B5B5180715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E739F68DC3E44DF69A9B2F08 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		A7EC5E02CC214831AE5D2294 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45CD1ADAF167479AB7829D43 = {isa = PBXGroup; children = (
-				91C3CF96CD8647FFB89CDBC7 /* TokenTracker */,
-						D4F11E68580B428EBD63F689 /* Products */
+		38CE502C25874F32BC771449 = {isa = PBXGroup; children = (
+				F3105A1C37F14C2FA29D7BD4 /* TokenTracker */,
+						5165E04B74744B818FB260B9 /* Products */
 			); sourceTree = "<group>"; };
-		91C3CF96CD8647FFB89CDBC7 /* TokenTracker */ = {isa = PBXGroup; children = (
-				2DD848A41FD54268A0520E18 /* TokenTrackerApp.swift */,
-						1798666B41B74CBA9CAA4444 /* Models */,
-						F2F5EA29E9BA4B73854BDDD1 /* Services */,
-						BA321D0E5BA949E798B2E593 /* ViewModels */,
-						BE0FEF994D494741AF991CB4 /* Views */,
-						B87C638915AD48E4B3405017 /* Resources */
+		F3105A1C37F14C2FA29D7BD4 /* TokenTracker */ = {isa = PBXGroup; children = (
+				2FE7A64C5B8D48DCA9986C2B /* TokenTrackerApp.swift */,
+						D7770A9CBAE84922BE0BAA0A /* Models */,
+						87B86865938C4F40BA77E498 /* Services */,
+						55DCC29F1E7A4AA289FEE238 /* ViewModels */,
+						2E8A8C149ADE429F894D3733 /* Views */,
+						7FBE068F4CFD4965A8DCC46E /* Resources */
 			); path = TokenTracker; sourceTree = "<group>"; };
-		1798666B41B74CBA9CAA4444 /* Models */ = {isa = PBXGroup; children = (
-				33DC8109600248F68313B59E /* Provider.swift */,
-						2DEBDC8A13A6424B80FB2CBA /* ProviderCatalog.swift */,
-						34666B0033264759A0082764 /* TokenUsage.swift */,
-						1A23F0609F8E4D23A6104D03 /* TokenUsageSample.swift */
+		D7770A9CBAE84922BE0BAA0A /* Models */ = {isa = PBXGroup; children = (
+				179629371EE045DEB33CDBE6 /* Provider.swift */,
+						027877E5909643D3A02C6CDE /* ProviderCatalog.swift */,
+						EAE0ABFC9A564121A011775C /* TokenUsage.swift */,
+						BA916E1E97E74222AB3B1BD9 /* TokenUsageSample.swift */
 			); path = Models; sourceTree = "<group>"; };
-		F2F5EA29E9BA4B73854BDDD1 /* Services */ = {isa = PBXGroup; children = (
-				EEDFAB5A81A2466F8A96FF35 /* ProviderRegistry.swift */,
-						59772179AD0949D29674F40D /* TokenUsageStore.swift */,
-						38DD5F9737D14CD0BFCAF305 /* LocalTokenUsageStore.swift */,
-						A80F33C5D04A4475B4302A20 /* TokenUsageHistoryStore.swift */,
-						0FFA9A7C8C92499EB881BC20 /* LocalTokenUsageHistoryStore.swift */,
-						93645AA8CC6D4328B2B58340 /* ProviderSettingsStore.swift */,
-						17C0F5C7CF6C4A82B5A7696F /* KeychainStore.swift */,
-						D0B55A4BD81E41D78EE655A8 /* TokenUsageClientError.swift */,
-						7594706FBDFF45D993214B91 /* MockTokenUsageClient.swift */,
-						63639C483B8A46919B8D0565 /* DeepSeekTokenUsageClient.swift */,
-						101BA976A5C74733A4AD05D2 /* TokenUsageRepository.swift */
+		87B86865938C4F40BA77E498 /* Services */ = {isa = PBXGroup; children = (
+				C423594F9E3F4A4EA54A0C89 /* ProviderRegistry.swift */,
+						4831DDFCA51049DFB6F76CD4 /* TokenUsageClient.swift */,
+						B96606AF10294453B15BF7AC /* OpenAITokenUsageClient.swift */,
+						6E43413571084B8BA0E9A103 /* QwenTokenUsageClient.swift */,
+						FE5DD795560E4B679625CE9F /* TokenUsageStore.swift */,
+						690D5926F281466F8EE5F9D1 /* LocalTokenUsageStore.swift */,
+						2DB67442557B48EEB7B24F08 /* TokenUsageHistoryStore.swift */,
+						8B9CF3472C96445C918B36FC /* LocalTokenUsageHistoryStore.swift */,
+						E17BD8F56DAD4021868A7F7B /* ProviderSettingsStore.swift */,
+						B1B645E1481544CE882EBDAA /* KeychainStore.swift */,
+						B8A5829C81EF4D9B8E35FB2D /* TokenUsageClientError.swift */,
+						1A5966DA05C64E7F836F0D18 /* DeepSeekTokenUsageClient.swift */,
+						7020773B34CB444D8F8DB2A8 /* TokenUsageRepository.swift */
 			); path = Services; sourceTree = "<group>"; };
-		BA321D0E5BA949E798B2E593 /* ViewModels */ = {isa = PBXGroup; children = (
-				93F5F66F86114F18B62F5B8F /* DashboardViewModel.swift */,
-						5F87C054BCD44C8EABB46043 /* SettingsViewModel.swift */
+		55DCC29F1E7A4AA289FEE238 /* ViewModels */ = {isa = PBXGroup; children = (
+				7A0EF5F9FDC942A3ACC0042E /* DashboardViewModel.swift */,
+						0232361A05824F86BC546B75 /* SettingsViewModel.swift */
 			); path = ViewModels; sourceTree = "<group>"; };
-		BE0FEF994D494741AF991CB4 /* Views */ = {isa = PBXGroup; children = (
-				FBD13A38DDF341B08AF9C740 /* ContentView.swift */,
-						2F559D700F5E47D2BF0E90FA /* DashboardView.swift */,
-						CB42E6AC812C46DE838FD16A /* ProviderRowView.swift */,
-						F85F8ADBA0984732B3111674 /* ManualAdjustView.swift */,
-						CEA399E3A9B743B98C4EA566 /* TrendChartView.swift */,
-						758810B9B15A4FA6BB09B5DD /* TrendCardView.swift */,
-						2CC06ACD1D6E4E958D3029B5 /* SettingsView.swift */
+		2E8A8C149ADE429F894D3733 /* Views */ = {isa = PBXGroup; children = (
+				B503A3BB0AD047C29BD72B01 /* ContentView.swift */,
+						0ADFFEE881284A0FAC1711A2 /* HomeView.swift */,
+						9180DB435EDE47C2AFC3C17A /* MonitorCardView.swift */,
+						67A0F638A6484902AFC22E79 /* DockerMonitorView.swift */,
+						FAB56C092EFC4662A3110185 /* DashboardView.swift */,
+						58EC113CDFE043A4921C6793 /* LineChartView.swift */,
+						4DC682EC62BC4C8FA59D7DD0 /* ModelDetailView.swift */,
+						EC41F4D021A6417B8BF134DE /* ModelUsageCardView.swift */,
+						786CF7B43CE04099AACD1CEE /* SettingsView.swift */,
+						B85A76C7B02346F4AD1259C6 /* UsageDonutView.swift */
 			); path = Views; sourceTree = "<group>"; };
-		B87C638915AD48E4B3405017 /* Resources */ = {isa = PBXGroup; children = (
-				7ADE0FD1C1D243CCB5937DFC /* Assets.xcassets */,
-						6CDF3C33285A4A30A9613B21 /* Info.plist */
+		7FBE068F4CFD4965A8DCC46E /* Resources */ = {isa = PBXGroup; children = (
+				D1974CC595994A92AC40B82C /* Assets.xcassets */,
+						2BFD9FAE5E4947B5B5180715 /* Info.plist */
 			); path = Resources; sourceTree = "<group>"; };
-		D4F11E68580B428EBD63F689 /* Products */ = {isa = PBXGroup; children = (
-				5F996EFF62824CD5A4D79C7F /* TokenTracker.app */
+		5165E04B74744B818FB260B9 /* Products */ = {isa = PBXGroup; children = (
+				A0CAE44FB0A4474C976BB3BE /* TokenTracker.app */
 			); name = Products; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0476E2454BEC43FA81AA193C /* TokenTracker */ = {isa = PBXNativeTarget; buildConfigurationList = D49A7EA89E4F403BBBE6BCA1 /* Build configuration list for PBXNativeTarget "TokenTracker" */; buildPhases = (
-				592A35F5238A4517BC908518 /* Sources */,
-				581514D339414B328BCD44B6 /* Resources */,
-				E739F68DC3E44DF69A9B2F08 /* Frameworks */,
-			); buildRules = (); dependencies = (); name = TokenTracker; productName = TokenTracker; productReference = 5F996EFF62824CD5A4D79C7F /* TokenTracker.app */; productType = "com.apple.product-type.application"; };
+		F8AFB2AC3DE648AE87EFD354 /* TokenTracker */ = {isa = PBXNativeTarget; buildConfigurationList = 684F9D6FCDD642FD939C01DC /* Build configuration list for PBXNativeTarget "TokenTracker" */; buildPhases = (
+				0DB04A18E54248A0A4CDF62D /* Sources */,
+				27AABD0C092644ADA04E9182 /* Resources */,
+				A7EC5E02CC214831AE5D2294 /* Frameworks */,
+			); buildRules = (); dependencies = (); name = TokenTracker; productName = TokenTracker; productReference = A0CAE44FB0A4474C976BB3BE /* TokenTracker.app */; productType = "com.apple.product-type.application"; };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		92A158533C1F4713AC9ADAF9 /* Project object */ = {isa = PBXProject; attributes = { LastSwiftUpdateCheck = 9999; LastUpgradeCheck = 9999; }; buildConfigurationList = 6CA567BF7315436883EA07CE /* Build configuration list for PBXProject "TokenTracker" */; compatibilityVersion = "Xcode 12.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base); mainGroup = 45CD1ADAF167479AB7829D43; productRefGroup = D4F11E68580B428EBD63F689; projectDirPath = ""; projectRoot = ""; targets = (
-				0476E2454BEC43FA81AA193C /* TokenTracker */,
+		66455EAFB1014029A82C5B98 /* Project object */ = {isa = PBXProject; attributes = { LastSwiftUpdateCheck = 9999; LastUpgradeCheck = 9999; }; buildConfigurationList = 522F017C62FC48A1ABD93552 /* Build configuration list for PBXProject "TokenTracker" */; compatibilityVersion = "Xcode 12.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base); mainGroup = 38CE502C25874F32BC771449; productRefGroup = 5165E04B74744B818FB260B9; projectDirPath = ""; projectRoot = ""; targets = (
+				F8AFB2AC3DE648AE87EFD354 /* TokenTracker */,
 			); };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		581514D339414B328BCD44B6 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (
-				ED5B61A29E8041DA9DD5916B /* Assets.xcassets in Resources */,
+		27AABD0C092644ADA04E9182 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (
+				111EA1F9A1454D189753946C /* Assets.xcassets in Resources */,
 			); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		592A35F5238A4517BC908518 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
-				E4AFD66AFC3F46E48C23620E /* TokenTrackerApp.swift in Sources */,
-						66C224A4434042E8929F6BA8 /* ContentView.swift in Sources */,
-						9D9F5B009D4A49389D26CC1B /* DashboardView.swift in Sources */,
-						C75F1FE8F4FC43588905393B /* ProviderRowView.swift in Sources */,
-						A24B1CBE144E4E62A8869DB2 /* ManualAdjustView.swift in Sources */,
-						4CC7248AFD9047A0883F81AA /* TrendChartView.swift in Sources */,
-						230BB483676646C4B8172D42 /* TrendCardView.swift in Sources */,
-						7071E5DF2E6A41DE8F48B8B9 /* SettingsView.swift in Sources */,
-						1B7D5E71A5824B0CAA27C8C9 /* Provider.swift in Sources */,
-						A4E21FFC1ECF4473B2BD84C9 /* ProviderCatalog.swift in Sources */,
-						D95F5B0214B74BFD9BE7BA4C /* TokenUsage.swift in Sources */,
-						0A001C04C626443D995C0305 /* TokenUsageSample.swift in Sources */,
-						D61055D40E384E2B83660EA4 /* ProviderRegistry.swift in Sources */,
-						C442756E0A384504A054356D /* TokenUsageStore.swift in Sources */,
-						5AC7C84395A0412088473A9C /* LocalTokenUsageStore.swift in Sources */,
-						704016AC55A34475B4F7AFDF /* TokenUsageHistoryStore.swift in Sources */,
-						CCCCB5756A4E483888264ECF /* LocalTokenUsageHistoryStore.swift in Sources */,
-						5B06859B4E354A81AA06C126 /* ProviderSettingsStore.swift in Sources */,
-						D3160A5EF4E9488DB1908FF3 /* KeychainStore.swift in Sources */,
-						ABF2B7109DBE4AAA8B10F341 /* TokenUsageClientError.swift in Sources */,
-						1DE216705B794841AC540841 /* MockTokenUsageClient.swift in Sources */,
-						7171954EFDF84FC697077F11 /* DeepSeekTokenUsageClient.swift in Sources */,
-						B900BA500FB24EA684DDB790 /* TokenUsageRepository.swift in Sources */,
-						7A22E08FEC0E4BD7943DF846 /* DashboardViewModel.swift in Sources */,
-						8313B24CBAB6471688D01672 /* SettingsViewModel.swift in Sources */
+		0DB04A18E54248A0A4CDF62D /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+				8BCAABA0484C4A7187921FC7 /* TokenTrackerApp.swift in Sources */,
+						40A60E02042344878D44A20C /* ContentView.swift in Sources */,
+						6B827C63CF6C4000B77A2572 /* HomeView.swift in Sources */,
+						5809BE5C5CF04E5EA27BDE4D /* MonitorCardView.swift in Sources */,
+						B148054C90784B71A7B3FF83 /* DockerMonitorView.swift in Sources */,
+						D45890CE6B824ED3A6F36F53 /* DashboardView.swift in Sources */,
+						CB8582010EA1473491C7F061 /* LineChartView.swift in Sources */,
+						C2A9666D16EF4334809C817A /* ModelDetailView.swift in Sources */,
+						A6A62CDA718646798C9BE2A3 /* ModelUsageCardView.swift in Sources */,
+						5717E0CC642F48B087514990 /* SettingsView.swift in Sources */,
+						925A844B0C284D2FB7B2C16C /* UsageDonutView.swift in Sources */,
+						0BFBA337968A4105A532B44E /* Provider.swift in Sources */,
+						D5276F683C884D4296AF3C89 /* ProviderCatalog.swift in Sources */,
+						97A160A4682B4A65A6E46F24 /* TokenUsage.swift in Sources */,
+						6279750F43F94E7AA3D5ABC7 /* TokenUsageSample.swift in Sources */,
+						7802CD29E04143C3B5C3F1F0 /* ProviderRegistry.swift in Sources */,
+						E23F898C260F47F19FEDE3EC /* TokenUsageClient.swift in Sources */,
+						8A48F5C9403145B6939343C6 /* OpenAITokenUsageClient.swift in Sources */,
+						88A06467F3C64AE2A991497E /* QwenTokenUsageClient.swift in Sources */,
+						CD13F4BA977C4D9294754870 /* TokenUsageStore.swift in Sources */,
+						FBE5E455E5AF45B48F21D9A9 /* LocalTokenUsageStore.swift in Sources */,
+						71EB6D148CE241968B556873 /* TokenUsageHistoryStore.swift in Sources */,
+						693BB62A29714AABB341F056 /* LocalTokenUsageHistoryStore.swift in Sources */,
+						70917B787F1E4B318090E404 /* ProviderSettingsStore.swift in Sources */,
+						9684480FABF64C0FB6C6FCAF /* KeychainStore.swift in Sources */,
+						4DAAE2D659C84DF5B7CADFA6 /* TokenUsageClientError.swift in Sources */,
+						E48549478171496F81ED73D2 /* DeepSeekTokenUsageClient.swift in Sources */,
+						26F973EAAA9A41E2A797ED62 /* TokenUsageRepository.swift in Sources */,
+						4E78158836AA4EAB9DA17F02 /* DashboardViewModel.swift in Sources */,
+						516934D345284EE8A9AE0219 /* SettingsViewModel.swift in Sources */
 			); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		06DDC4011755443C9189E095 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; ENABLE_TESTABILITY = YES; IPHONEOS_DEPLOYMENT_TARGET = 14.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
-		AAF76E7F97A64FDDA977258B /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; IPHONEOS_DEPLOYMENT_TARGET = 14.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
-		B5FA41217B6A4680B95F5DCC /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; INFOPLIST_FILE = TokenTracker/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.tokentracker; PRODUCT_NAME = TokenTracker; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
-		10E6B082AEBE4C4E8137524F /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; INFOPLIST_FILE = TokenTracker/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.tokentracker; PRODUCT_NAME = TokenTracker; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+		330413BC69DB404D9A0C76F9 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; ENABLE_TESTABILITY = YES; IPHONEOS_DEPLOYMENT_TARGET = 14.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		93B4B4AC4D864FCDBCAE2048 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; IPHONEOS_DEPLOYMENT_TARGET = 14.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		2698615103494A8991089253 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; INFOPLIST_FILE = TokenTracker/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.tokentracker; PRODUCT_NAME = TokenTracker; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+		14C98B86BF3647EB9CC3E5F6 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = ""; INFOPLIST_FILE = TokenTracker/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.tokentracker; PRODUCT_NAME = TokenTracker; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6CA567BF7315436883EA07CE /* Build configuration list for PBXProject "TokenTracker" */ = {isa = XCConfigurationList; buildConfigurations = (
-				06DDC4011755443C9189E095 /* Debug */,
-				AAF76E7F97A64FDDA977258B /* Release */,
+		522F017C62FC48A1ABD93552 /* Build configuration list for PBXProject "TokenTracker" */ = {isa = XCConfigurationList; buildConfigurations = (
+				330413BC69DB404D9A0C76F9 /* Debug */,
+				93B4B4AC4D864FCDBCAE2048 /* Release */,
 			); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		D49A7EA89E4F403BBBE6BCA1 /* Build configuration list for PBXNativeTarget "TokenTracker" */ = {isa = XCConfigurationList; buildConfigurations = (
-				B5FA41217B6A4680B95F5DCC /* Debug */,
-				10E6B082AEBE4C4E8137524F /* Release */,
+		684F9D6FCDD642FD939C01DC /* Build configuration list for PBXNativeTarget "TokenTracker" */ = {isa = XCConfigurationList; buildConfigurations = (
+				2698615103494A8991089253 /* Debug */,
+				14C98B86BF3647EB9CC3E5F6 /* Release */,
 			); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
 /* End XCConfigurationList section */
 
 	};
-	rootObject = 92A158533C1F4713AC9ADAF9 /* Project object */;
+	rootObject = 66455EAFB1014029A82C5B98 /* Project object */;
 }

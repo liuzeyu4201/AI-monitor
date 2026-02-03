@@ -12,8 +12,8 @@ final class DashboardViewModel: ObservableObject {
     @Published var lastRefresh: Date?
     @Published var history: [ProviderID: [TokenUsageSample]] = [:]
 
-    private let registry: ProviderRegistry
-    private let repository: TokenUsageRepository
+    private var registry: ProviderRegistry
+    private var repository: TokenUsageRepository
     private var timer: Timer?
 
     init(registry: ProviderRegistry = .default(), repository: TokenUsageRepository? = nil) {
@@ -41,8 +41,9 @@ final class DashboardViewModel: ObservableObject {
         }
     }
 
-    func updateManual(providerId: ProviderID, remaining: Double, limit: Double) {
-        repository.updateManual(providerId: providerId, remaining: remaining, limit: limit)
+    func reloadProviders() {
+        registry = .default()
+        repository.updateRegistry(registry)
         rebuildItems(from: repository.loadCached())
         history = repository.loadHistory()
     }
